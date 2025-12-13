@@ -10074,6 +10074,7 @@ export default {
           "programming"
         ],
         "example": "/anthropic/engineering",
+        "parameters": {},
         "radar": [
           {
             "source": [
@@ -20446,6 +20447,67 @@ export default {
     "url": "cste.org.cn",
     "lang": "zh-CN"
   },
+  "canada.ca": {
+    "routes": {
+      "/news/:lang/:department?": {
+        "path": "/news/:lang/:department?",
+        "categories": [
+          "government"
+        ],
+        "example": "/canada.ca/news/en/departmentfinance",
+        "parameters": {
+          "lang": "Language, en or fr",
+          "department": "dprtmnt query value"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.canada.ca/:lang/department-finance.html",
+              "www.canada.ca/:lang/ministere-finances.html",
+              "www.canada.ca/:lang/department-finance/news/*",
+              "www.canada.ca/:lang/ministere-finances/nouvelles/*"
+            ],
+            "target": "/news/:lang/departmentfinance"
+          },
+          {
+            "source": [
+              "ised-isde.canada.ca/site/ised/:lang",
+              "ised-isde.canada.ca/site/isde/:lang",
+              "www.canada.ca/:lang/innovation-science-economic-development/news/*",
+              "www.canada.ca/:lang/innovation-sciences-developpement-economique/nouvelles/*"
+            ],
+            "target": "/news/:lang/departmentofindustry"
+          },
+          {
+            "source": [
+              "www.canada.ca/:lang/news/advanced-news-search/news-results.html",
+              "www.canada.ca/:lang/nouvelles/recherche-avancee-de-nouvelles/resultats-de-nouvelles.html"
+            ],
+            "target": "/news/:lang"
+          }
+        ],
+        "name": "News by Department",
+        "maintainers": [
+          "elibroftw"
+        ],
+        "description": "News from specific Canadian government departments",
+        "location": "news.ts",
+        "module": () => import('@/routes/canada.ca/news.ts')
+      }
+    },
+    "name": "Canada.ca",
+    "url": "www.canada.ca",
+    "description": "Government of Canada news by department",
+    "lang": "en"
+  },
   "cankaoxiaoxi": {
     "routes": {
       "/column/:id?": {
@@ -20662,6 +20724,129 @@ export default {
     "name": "Cara",
     "apiRoutes": {},
     "url": "cara.app",
+    "lang": "en"
+  },
+  "carousell": {
+    "routes": {
+      "/:region/:keyword": {
+        "path": "/:region/:keyword",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/carousell/sg/iphone",
+        "parameters": {
+          "region": {
+            "description": "Region code",
+            "options": [
+              {
+                "value": "au",
+                "label": "Australia"
+              },
+              {
+                "value": "ca",
+                "label": "Canada"
+              },
+              {
+                "value": "hk",
+                "label": "Hong Kong"
+              },
+              {
+                "value": "id",
+                "label": "Indonesia"
+              },
+              {
+                "value": "my",
+                "label": "Malaysia"
+              },
+              {
+                "value": "nz",
+                "label": "New Zealand"
+              },
+              {
+                "value": "ph",
+                "label": "Philippines"
+              },
+              {
+                "value": "sg",
+                "label": "Singapore"
+              },
+              {
+                "value": "tw",
+                "label": "Taiwan"
+              }
+            ]
+          },
+          "keyword": {
+            "description": "Search keyword"
+          }
+        },
+        "name": "Keyword Search",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "radar": [
+          {
+            "source": [
+              "au.carousell.com/search/:keyword"
+            ],
+            "target": "/au/:keyword"
+          },
+          {
+            "source": [
+              "ca.carousell.com/search/:keyword"
+            ],
+            "target": "/ca/:keyword"
+          },
+          {
+            "source": [
+              "www.carousell.com.hk/search/:keyword"
+            ],
+            "target": "/hk/:keyword"
+          },
+          {
+            "source": [
+              "id.carousell.com/search/:keyword"
+            ],
+            "target": "/id/:keyword"
+          },
+          {
+            "source": [
+              "www.carousell.com.my/search/:keyword"
+            ],
+            "target": "/my/:keyword"
+          },
+          {
+            "source": [
+              "nz.carousell.com/search/:keyword"
+            ],
+            "target": "/nz/:keyword"
+          },
+          {
+            "source": [
+              "www.carousell.ph/search/:keyword"
+            ],
+            "target": "/ph/:keyword"
+          },
+          {
+            "source": [
+              "www.carousell.sg/search/:keyword"
+            ],
+            "target": "/sg/:keyword"
+          },
+          {
+            "source": [
+              "tw.carousell.com/search/:keyword"
+            ],
+            "target": "/tw/:keyword"
+          }
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/carousell/index.ts')
+      }
+    },
+    "name": "Carousell",
+    "apiRoutes": {},
+    "url": "carousell.com",
     "lang": "en"
   },
   "cartoonmad": {

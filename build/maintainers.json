@@ -1188,6 +1188,9 @@
   "/bt0/tlist/:sc/:domain?": [
     "miemieYaho"
   ],
+  "/btbtla/gxlist": [
+    "Hermes1030"
+  ],
   "/btzj/:category?": [
     "nczitzk"
   ],
@@ -6042,6 +6045,9 @@
   "/nltimes/news/:category?": [
     "Hivol"
   ],
+  "/nmc/publish/:id{.+}?": [
+    "nczitzk"
+  ],
   "/nmc/weatheralarm/:province?": [
     "ylc395"
   ],
@@ -7023,6 +7029,9 @@
     "WhiteWorld",
     "nczitzk",
     "Fatpandac"
+  ],
+  "/readsomethingwonderful/": [
+    "ttttmr"
   ],
   "/readwise/list/:routeParams?": [
     "xbot"
@@ -8056,6 +8065,9 @@
   "/techflowpost/express": [
     "nczitzk"
   ],
+  "/techflowpost/featured/:category?": [
+    "zhenlohuang"
+  ],
   "/techflowpost/": [
     "nczitzk"
   ],
@@ -8146,6 +8158,9 @@
     "Fatpandac",
     "jameshih",
     "DIYgod"
+  ],
+  "/thebrain/blog": [
+    "nczitzk"
   ],
   "/thecover/channel/:id?": [
     "yuxinliu-alex"
@@ -9039,6 +9054,9 @@
   ],
   "/x-mol/paper/:type/:magazine": [
     "cssxsh"
+  ],
+  "/x410/news": [
+    "nczitzk"
   ],
   "/x6d/:id?": [
     "nczitzk"

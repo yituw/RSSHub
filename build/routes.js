@@ -1322,7 +1322,9 @@ export default {
           }
         ],
         "name": "搜索",
-        "maintainers": [],
+        "maintainers": [
+          "nczitzk"
+        ],
         "url": "jmcomic.group/",
         "description": "::: tip\n  关键字必须超过两个字，这是来自网站的限制。\n:::",
         "location": "search.ts",
@@ -16286,6 +16288,186 @@ export default {
         ],
         "location": "manga-update.ts",
         "module": () => import('@/routes/bilibili/manga-update.ts')
+      },
+      "/message/at/:uid": {
+        "path": "/message/at/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/at/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "@我的",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::",
+        "location": "message-at.ts",
+        "module": () => import('@/routes/bilibili/message-at.ts')
+      },
+      "/message/like/:uid": {
+        "path": "/message/like/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/like/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "收到的赞",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::",
+        "location": "message-like.ts",
+        "module": () => import('@/routes/bilibili/message-like.ts')
+      },
+      "/message/reply/:uid": {
+        "path": "/message/reply/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/reply/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "回复我的",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::",
+        "location": "message-reply.ts",
+        "module": () => import('@/routes/bilibili/message-reply.ts')
+      },
+      "/message/sessions/:uid": {
+        "path": "/message/sessions/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/sessions/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "我的消息",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::",
+        "location": "message-sessions.ts",
+        "module": () => import('@/routes/bilibili/message-sessions.ts')
+      },
+      "/message/system/:uid": {
+        "path": "/message/system/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/system/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "系统通知",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::",
+        "location": "message-system.ts",
+        "module": () => import('@/routes/bilibili/message-system.ts')
+      },
+      "/message/unread/:uid": {
+        "path": "/message/unread/:uid",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/bilibili/message/unread/2267573",
+        "parameters": {
+          "uid": "用户 id"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "BILIBILI_COOKIE_*",
+              "description": "BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，`{uid}` 替换为 uid，如 `BILIBILI_COOKIE_2267573`，获取方式：\n    1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 dynamic_new 请求，找到 Cookie\n    4.  视频和专栏，UP 主粉丝及关注只要求 `SESSDATA` 字段，动态需复制整段 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "未读消息",
+        "maintainers": [
+          "pilgrimlyieu"
+        ],
+        "description": ":::warning\n  用户消息需要 b 站登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n\n  此路由返回所有未读消息类型的汇总状态。\n:::",
+        "location": "message-unread.ts",
+        "module": () => import('@/routes/bilibili/message-unread.ts')
       },
       "/video/page/:bvid/:embed?": {
         "path": "/video/page/:bvid/:embed?",
@@ -34995,6 +35177,45 @@ export default {
     "url": "diershoubing.com",
     "lang": "zh-CN"
   },
+  "digg": {
+    "routes": {
+      "/community/:community": {
+        "path": "/community/:community",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/digg/community/askdigg",
+        "parameters": {
+          "community": "Community slug, can be found in the URL"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "digg.com/:community"
+            ]
+          }
+        ],
+        "name": "Community Posts",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "digg.com/",
+        "location": "community.tsx",
+        "module": () => import('@/routes/digg/community.tsx')
+      }
+    },
+    "name": "Digg",
+    "apiRoutes": {},
+    "url": "digg.com"
+  },
   "digitalcameraworld": {
     "routes": {
       "/news": {
@@ -46151,6 +46372,21 @@ export default {
     "routes": {
       "/oa_news/:type?": {
         "path": "/oa_news/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/gdut/oa_news/notice",
+        "parameters": {
+          "type": "通知类型，留空则获取所有分类"
+        },
+        "feature": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
         "radar": [
           {
             "source": [
@@ -46159,11 +46395,14 @@ export default {
             "target": "/oa_news/"
           }
         ],
-        "name": "Unknown",
+        "name": "通知公文网",
         "maintainers": [
-          "jim-kirisame"
+          "jim-kirisame",
+          "GamerNoTitle",
+          "Richard-Zheng"
         ],
         "url": "oas.gdut.edu.cn/seeyon",
+        "description": "学校可能会因为 IP 来源非学校而做出一定的限制，建议在校内网络环境下使用 RSS 阅读器订阅。\n\n| 类型 | 参数 | 可能需要校内访问 |\n| ---- | ---- | ---------------- |\n| 部处简讯 | department | 是 |\n| 学院简讯 | academy | 是 |\n| 校内通知 | notice | 是 |\n| 公示公告 | announcement | 是 |\n| 招标结果 | tender_result | 否 |\n| 招标公告 | tender_invite | 否 |\n",
         "location": "oa-news.ts",
         "module": () => import('@/routes/gdut/oa-news.ts')
       }
@@ -60931,31 +61170,6 @@ export default {
   },
   "huxiu": {
     "routes": {
-      "/briefcolumn/:id": {
-        "path": "/briefcolumn/:id",
-        "categories": [
-          "new-media"
-        ],
-        "example": "/huxiu/briefcolumn/1",
-        "parameters": {
-          "id": "简报 id，可在对应简报页 URL 中找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
-          "supportPodcast": true,
-          "supportScihub": false
-        },
-        "name": "简报",
-        "maintainers": [
-          "Fatpandac",
-          "nczitzk"
-        ],
-        "location": "brief-column.ts",
-        "module": () => import('@/routes/huxiu/brief-column.ts')
-      },
       "/article": {
         "path": [
           "/article",
@@ -60969,8 +61183,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -60984,9 +61198,10 @@ export default {
         "name": "资讯",
         "maintainers": [
           "HenryQW",
-          "nczitzk"
+          "nczitzk",
+          "TimoYoung"
         ],
-        "description": "| 视频 | 车与出行 | 年轻一代 | 十亿消费者 | 前沿科技 |\n| ---- | -------- | -------- | ---------- | -------- |\n| 10   | 21       | 106      | 103        | 105      |\n\n| 财经 | 娱乐淘金 | 医疗健康 | 文化教育 | 出海 |\n| ---- | -------- | -------- | -------- | ---- |\n| 115  | 22       | 111      | 113      | 114  |\n\n| 金融地产 | 企业服务 | 创业维艰 | 社交通讯 | 全球热点 | 生活腔调 |\n| -------- | -------- | -------- | -------- | -------- | -------- |\n| 102      | 110      | 2        | 112      | 107      | 4        |",
+        "description": "| 视频 | 前沿科技 | 车与出行 | 商业消费 | 社会文化 |\n| ---- | -------- | -------- | ---------- | -------- |\n| 10   | 105    | 21    | 103        | 106     |\n\n| 金融财经 | 出海 | 国际热点 | 游戏娱乐 | 健康 |\n| -------- | ---- | -------- | -------- | ---- |\n| 115      | 114  | 107      | 22       | 118  |\n\n| 书影音 | 医疗 | 3C数码 | 观点 | 其他 |\n| ------ | ---- | ------ | ---- | ---- |\n| 119    | 120  | 121    | 122  | 123  |",
         "url": "huxiu.com/article",
         "location": "channel.ts",
         "module": () => import('@/routes/huxiu/channel.ts')
@@ -61004,8 +61219,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -61019,9 +61234,10 @@ export default {
         "name": "资讯",
         "maintainers": [
           "HenryQW",
-          "nczitzk"
+          "nczitzk",
+          "TimoYoung"
         ],
-        "description": "| 视频 | 车与出行 | 年轻一代 | 十亿消费者 | 前沿科技 |\n| ---- | -------- | -------- | ---------- | -------- |\n| 10   | 21       | 106      | 103        | 105      |\n\n| 财经 | 娱乐淘金 | 医疗健康 | 文化教育 | 出海 |\n| ---- | -------- | -------- | -------- | ---- |\n| 115  | 22       | 111      | 113      | 114  |\n\n| 金融地产 | 企业服务 | 创业维艰 | 社交通讯 | 全球热点 | 生活腔调 |\n| -------- | -------- | -------- | -------- | -------- | -------- |\n| 102      | 110      | 2        | 112      | 107      | 4        |",
+        "description": "| 视频 | 前沿科技 | 车与出行 | 商业消费 | 社会文化 |\n| ---- | -------- | -------- | ---------- | -------- |\n| 10   | 105    | 21    | 103        | 106     |\n\n| 金融财经 | 出海 | 国际热点 | 游戏娱乐 | 健康 |\n| -------- | ---- | -------- | -------- | ---- |\n| 115      | 114  | 107      | 22       | 118  |\n\n| 书影音 | 医疗 | 3C数码 | 观点 | 其他 |\n| ------ | ---- | ------ | ---- | ---- |\n| 119    | 120  | 121    | 122  | 123  |",
         "url": "huxiu.com/article",
         "location": "channel.ts",
         "module": () => import('@/routes/huxiu/channel.ts')
@@ -61032,13 +61248,23 @@ export default {
         "categories": [
           "new-media"
         ],
-        "example": "/huxiu/club/2029",
+        "example": "/huxiu/club/1161",
         "parameters": {
-          "id": "俱乐部 id，可在对应俱乐部页 URL 中找到"
+          "id": "源流 id，可在对应源流页 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
         },
         "maintainers": [
-          "nczitzk"
+          "nczitzk",
+          "TimoYoung"
         ],
+        "description": "更多源流请参见 [源流](https://www.huxiu.com/club)",
         "location": "club.ts",
         "module": () => import('@/routes/huxiu/club.ts')
       },
@@ -61054,8 +61280,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -61081,6 +61307,14 @@ export default {
         "parameters": {
           "id": "用户 id，可在对应用户页 URL 中找到"
         },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
         "maintainers": [
           "nczitzk"
         ],
@@ -61101,6 +61335,14 @@ export default {
         "parameters": {
           "id": "用户 id，可在对应用户页 URL 中找到"
         },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
         "maintainers": [
           "nczitzk"
         ],
@@ -61118,8 +61360,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -61150,8 +61392,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -61184,8 +61426,8 @@ export default {
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": true,
+          "antiCrawler": true,
+          "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
@@ -61193,7 +61435,8 @@ export default {
         "maintainers": [
           "xyqfer",
           "HenryQW",
-          "nczitzk"
+          "nczitzk",
+          "TimoYoung"
         ],
         "description": "更多标签请参见 [标签](https://www.huxiu.com/tags)",
         "location": "tag.ts",
@@ -62964,52 +63207,6 @@ export default {
     "name": "InfoQ 中文",
     "url": "infoq.cn",
     "lang": "zh-CN"
-  },
-  "informedainews": {
-    "routes": {
-      "/zh-Hans/docs/:type": {
-        "path": "/zh-Hans/docs/:type",
-        "categories": [
-          "new-media"
-        ],
-        "example": "/informedainews/zh-Hans/docs/world-news-daily",
-        "parameters": {
-          "type": "world-news-daily|tech-enthusiast-weekly|ai-enthusiast-daily"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "informedainews.com",
-              "informedainews.com/zh-Hans/docs/:type",
-              "informedainews.com/docs/:type"
-            ],
-            "target": "/zh-Hans/docs/:type"
-          }
-        ],
-        "name": "知闻AI",
-        "maintainers": [
-          "guicaiyue"
-        ],
-        "location": "docs.ts",
-        "module": () => import('@/routes/informedainews/docs.ts')
-      }
-    },
-    "name": "Informed AI News",
-    "apiRoutes": {},
-    "url": "informedainews.com",
-    "description": "\n::: tip\ninformed AI RSS feeds:\n\n-   World News Daily: 'https://rsshub.app/informedainews/zh-Hans/docs/world-news-daily'\n-   Tech Enthusiast Weekly: 'https://rsshub.app/informedainews/zh-Hans/docs/tech-enthusiast-weekly'\n-   AI Enthusiast Weekly: 'https://rsshub.app/informedainews/zh-Hans/docs/ai-enthusiast-daily'\n:::",
-    "zh": {
-      "name": "知闻AI"
-    },
-    "lang": "en"
   },
   "informs": {
     "routes": {
@@ -72420,6 +72617,50 @@ export default {
     "name": "荒岛",
     "url": "lala.im",
     "lang": "zh-CN"
+  },
+  "lancedb": {
+    "routes": {
+      "/blog/:category?": {
+        "path": "/blog/:category?",
+        "name": "Blog",
+        "url": "lancedb.com/blog",
+        "maintainers": [
+          "HUSTERGS"
+        ],
+        "example": "/lancedb/blog",
+        "parameters": {
+          "category": "filter blog post by category, return all posts if not specified"
+        },
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lancedb.com/blog",
+              "lancedb.com/blog/category/:category"
+            ],
+            "target": "/blog/:category"
+          }
+        ],
+        "view": 0,
+        "location": "blog.ts",
+        "module": () => import('@/routes/lancedb/blog.ts')
+      }
+    },
+    "name": "LanceDB",
+    "apiRoutes": {},
+    "url": "lancedb.com",
+    "description": "",
+    "lang": "en"
   },
   "landiannews": {
     "routes": {
@@ -88304,6 +88545,72 @@ export default {
         "description": "可选参数：\n\n  -   companyId：公司 id，[🔗查询链接](https://www.nowcoder.com/discuss/tag/exp), 复制打开\n  -   order：3 - 最新；1 - 最热\n  -   phaseId：0 - 所有；1 - 校招；2 - 实习；3 - 社招",
         "location": "experience.ts",
         "module": () => import('@/routes/nowcoder/experience.ts')
+      },
+      "/hots/:type?": {
+        "path": "/hots/:type?",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/nowcoder/hots/1?limit=20",
+        "parameters": {
+          "type": "热榜类型，`1` 指热议话题，`2` 指全站热贴，默认为 `1`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "mnowpick.nowcoder.com/m/discuss/hot"
+            ]
+          }
+        ],
+        "name": "牛客热榜",
+        "description": "牛客热榜，包括热议话题和全站热贴",
+        "maintainers": [
+          "xia0ne"
+        ],
+        "url": "nowcoder.com/",
+        "location": "hots.ts",
+        "module": () => import('@/routes/nowcoder/hots.ts')
+      },
+      "/interview/:jobId": {
+        "path": "/interview/:jobId",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/nowcoder/interview/11200",
+        "parameters": {
+          "jobId": "岗位 ID，如 11200（全部）、11002（Java）"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.nowcoder.com/interview/"
+            ]
+          }
+        ],
+        "name": "牛客面试经验",
+        "description": "牛客面试经验",
+        "maintainers": [
+          "xia0ne"
+        ],
+        "url": "nowcoder.com/",
+        "location": "interview.ts",
+        "module": () => import('@/routes/nowcoder/interview.ts')
       },
       "/jobcenter/:recruitType?/:city?/:type?/:order?/:latest?": {
         "path": "/jobcenter/:recruitType?/:city?/:type?/:order?/:latest?",

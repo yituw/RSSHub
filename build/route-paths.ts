@@ -1003,7 +1003,6 @@ export type RoutePath =
   | `/firefox/release/:platform?`
   | `/fisher-spb/news`
   | `/fishshell/`
-  | `/fjdaily/:date?`
   | `/fjksbm/:category?`
   | `/flashcat/blog`
   | `/flyert/creditcard/:bank`
@@ -1437,7 +1436,6 @@ export type RoutePath =
   | `/hubu/www/:category{.+}?`
   | `/hubu/zhxy/:category{.+}?`
   | `/hudsonrivertrading/blog/:section?`
-  | `/huggingface/activity/:user/likes`
   | `/huggingface/blog`
   | `/huggingface/blog-community/:sort?`
   | `/huggingface/blog-zh`
@@ -2419,7 +2417,6 @@ export type RoutePath =
   | `/ruankao/news`
   | `/ruc/ai/:category?`
   | `/ruc/hr/:category?`
-  | `/rule34video/latest`
   | `/runyeah/`
   | `/rustcc/jobs`
   | `/rustcc/news`

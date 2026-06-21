@@ -1129,8 +1129,8 @@
   },
   "141jav": {
     "routes": {
-      "/:type/:keyword{.*}?": {
-        "path": "/:type/:keyword{.*}?",
+      "/:type/:keyword{.+}?": {
+        "path": "/:type/:keyword{.+}?",
         "categories": [
           "multimedia"
         ],
@@ -1159,8 +1159,8 @@
   },
   "141ppv": {
     "routes": {
-      "/:type/:keyword{.*}?": {
-        "path": "/:type/:keyword{.*}?",
+      "/:type/:keyword{.+}?": {
+        "path": "/:type/:keyword{.+}?",
         "categories": [
           "multimedia"
         ],
@@ -2869,7 +2869,7 @@
         "categories": [
           "programming"
         ],
-        "example": "/category/css/interactivity",
+        "example": "/30secondsofcode/category/css/interactivity",
         "parameters": {
           "category": {
             "description": "Main Category. For Complete list visit site \"https://www.30secondsofcode.org/collections/p/1/\"",
@@ -2925,7 +2925,7 @@
         "categories": [
           "programming"
         ],
-        "example": "/latest",
+        "example": "/30secondsofcode/latest",
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -5594,7 +5594,7 @@
     "routes": {
       "/:category{.+}?": {
         "path": "/:category{.+}?",
-        "example": "/wa",
+        "example": "/abc/wa",
         "radar": [
           {
             "source": [
@@ -6096,7 +6096,7 @@
         "categories": [
           "anime"
         ],
-        "example": "/news",
+        "example": "/acgvinyl/news",
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -8466,9 +8466,7 @@
         "module": "() => import('@/routes/air-level/index.ts')"
       },
       "/rank/:status?": {
-        "path": [
-          "/rank/:status?"
-        ],
+        "path": "/rank/:status?",
         "radar": [
           {
             "source": [
@@ -10328,7 +10326,7 @@
       "/topics/:topic?": {
         "path": [
           "/topics/:topic?",
-          "/nav/:nav{.*}?"
+          "/nav/:nav{.+}?"
         ],
         "categories": [
           "traditional-media"
@@ -10366,10 +10364,10 @@
         "location": "topics.ts",
         "module": "() => import('@/routes/apnews/topics.ts')"
       },
-      "/nav/:nav{.*}?": {
+      "/nav/:nav{.+}?": {
         "path": [
           "/topics/:topic?",
-          "/nav/:nav{.*}?"
+          "/nav/:nav{.+}?"
         ],
         "categories": [
           "traditional-media"
@@ -12693,9 +12691,7 @@
         "module": "() => import('@/routes/baai/events.ts')"
       },
       "/hub/:tagId?/:sort?/:range?": {
-        "path": [
-          "/hub/:tagId?/:sort?/:range?"
-        ],
+        "path": "/hub/:tagId?/:sort?/:range?",
         "categories": [
           "programming"
         ],
@@ -13508,11 +13504,15 @@
   },
   "bangumi.moe": {
     "routes": {
-      "/*": {
-        "path": "/*",
+      "/:tags{.+}?": {
+        "path": "/:tags{.+}?",
         "categories": [
           "anime"
         ],
+        "example": "/bangumi.moe",
+        "parameters": {
+          "tags": "Tags, empty by default, multiple tags separated by `/`"
+        },
         "radar": [
           {
             "source": [
@@ -13521,7 +13521,6 @@
           }
         ],
         "name": "Latest",
-        "example": "/bangumi.moe",
         "maintainers": [
           "nczitzk"
         ],
@@ -19417,7 +19416,7 @@
           "social-media"
         ],
         "view": 1,
-        "example": "/bsky.app/profile/jaz.bsky.social/feed/cv:cat",
+        "example": "/bsky/profile/jaz.bsky.social/feed/cv:cat",
         "parameters": {
           "handle": "User handle, can be found in URL",
           "space": "Space ID, can be found in URL"
@@ -21199,9 +21198,7 @@
   "cara": {
     "routes": {
       "/likes/:user": {
-        "path": [
-          "/likes/:user"
-        ],
+        "path": "/likes/:user",
         "categories": [
           "social-media"
         ],
@@ -21226,9 +21223,7 @@
         "module": "() => import('@/routes/cara/likes.ts')"
       },
       "/portfolio/:user": {
-        "path": [
-          "/portfolio/:user"
-        ],
+        "path": "/portfolio/:user",
         "categories": [
           "social-media"
         ],
@@ -21253,9 +21248,7 @@
         "module": "() => import('@/routes/cara/portfolio.ts')"
       },
       "/timeline/:user": {
-        "path": [
-          "/timeline/:user"
-        ],
+        "path": "/timeline/:user",
         "categories": [
           "social-media"
         ],
@@ -26083,7 +26076,7 @@
         "categories": [
           "travel"
         ],
-        "example": "/zx/xingnew",
+        "example": "/chnmuseum/zx/xingnew",
         "parameters": {},
         "features": {
           "requireConfig": false,
@@ -26113,7 +26106,7 @@
         "categories": [
           "travel"
         ],
-        "example": "/zx/xwzt",
+        "example": "/chnmuseum/zx/xwzt",
         "parameters": {},
         "features": {
           "requireConfig": false,
@@ -27598,9 +27591,7 @@
     "routes": {
       "/category/:id": {
         "name": "分类",
-        "path": [
-          "/category/:id"
-        ],
+        "path": "/category/:id",
         "example": "/cnbeta/category/movie",
         "maintainers": [
           "nczitzk"
@@ -27622,9 +27613,7 @@
       },
       "/": {
         "name": "头条资讯",
-        "path": [
-          "/"
-        ],
+        "path": "/",
         "example": "/cnbeta",
         "radar": [
           {
@@ -27644,9 +27633,7 @@
       },
       "/topics/:id": {
         "name": "主题",
-        "path": [
-          "/topics/:id"
-        ],
+        "path": "/topics/:id",
         "example": "/cnbeta/topics/453",
         "maintainers": [
           "cczhong11",
@@ -29142,9 +29129,7 @@
   "cohere": {
     "routes": {
       "/blog": {
-        "path": [
-          "/blog"
-        ],
+        "path": "/blog",
         "name": "Blog",
         "url": "cohere.com/blog",
         "maintainers": [
@@ -29871,9 +29856,7 @@
         "module": "() => import('@/routes/coolapk/toutiao.ts')"
       },
       "/tuwen/:type?": {
-        "path": [
-          "/tuwen/:type?"
-        ],
+        "path": "/tuwen/:type?",
         "categories": [
           "social-media"
         ],
@@ -33920,7 +33903,7 @@
         "categories": [
           "new-media"
         ],
-        "example": "/articles/9",
+        "example": "/dedao/articles/9",
         "parameters": {
           "id": "文章类型 ID，8 为得到头条，9 为得到精选，默认为 8"
         },
@@ -36784,9 +36767,7 @@
         "maintainers": [
           "Rjnishant530"
         ],
-        "path": [
-          "/:category"
-        ],
+        "path": "/:category",
         "example": "/dnaindia/headlines",
         "parameters": {
           "category": "Find it in the URL, or tables below"
@@ -36808,9 +36789,7 @@
         "maintainers": [
           "Rjnishant530"
         ],
-        "path": [
-          "/topic/:topic"
-        ],
+        "path": "/topic/:topic",
         "example": "/dnaindia/topic/dna-verified",
         "parameters": {
           "category": "Find it in the URL"
@@ -38081,15 +38060,14 @@
         "location": "other/replies.ts",
         "module": "() => import('@/routes/douban/other/replies.ts')"
       },
-      "/people/:userid/wish/:routeParams?": {
-        "path": "/people/:userid/wish/:routeParams?",
+      "/people/:userid/wish": {
+        "path": "/people/:userid/wish",
         "categories": [
           "social-media"
         ],
         "example": "/douban/people/exherb/wish",
         "parameters": {
-          "userid": "用户id",
-          "routeParams": "额外参数；见下"
+          "userid": "用户id"
         },
         "features": {
           "requireConfig": false,
@@ -38103,7 +38081,6 @@
         "maintainers": [
           "exherb"
         ],
-        "description": "对于豆瓣用户想看的内容，在 `routeParams` 参数中以 query string 格式设置如下选项可以控制输出的样式\n\n| 键         | 含义       | 接受的值 | 默认值 |\n| ---------- | ---------- | -------- | ------ |\n| pagesCount | 查询页面数 |          | 1      |",
         "location": "people/wish.ts",
         "module": "() => import('@/routes/douban/people/wish.ts')"
       }
@@ -46705,12 +46682,62 @@
           "supportPodcast": false,
           "supportScihub": false
         },
-        "radar": [],
+        "radar": [
+          {
+            "title": "热点图文",
+            "source": [
+              "www.gamersky.com/ent"
+            ],
+            "target": "/ent/all"
+          },
+          {
+            "title": "趣囧时间",
+            "source": [
+              "www.gamersky.com/ent/qw"
+            ],
+            "target": "/ent/qw"
+          },
+          {
+            "title": "游民影院",
+            "source": [
+              "www.gamersky.com/wenku/movie"
+            ],
+            "target": "/ent/movie"
+          },
+          {
+            "title": "游观天下",
+            "source": [
+              "www.gamersky.com/ent/discovery"
+            ],
+            "target": "/ent/discovery"
+          },
+          {
+            "title": "壁纸图库",
+            "source": [
+              "www.gamersky.com/ent/wp"
+            ],
+            "target": "/ent/wp"
+          },
+          {
+            "title": "游民盘点",
+            "source": [
+              "www.gamersky.com/wenku"
+            ],
+            "target": "/ent/wenku"
+          },
+          {
+            "title": "游民福利",
+            "source": [
+              "www.gamersky.com/ent/xz"
+            ],
+            "target": "/ent/xz"
+          }
+        ],
         "name": "娱乐",
         "maintainers": [
           "LogicJake"
         ],
-        "description": "|\n|\n|\n",
+        "description": "|all|qw|movie|discovery|wp|wenku|xz|\n|---|---|---|---|---|---|---|\n|热点图文|趣囧时间|游民影院|游观天下|壁纸图库|游民盘点|游民福利|\n",
         "location": "ent.ts",
         "module": "() => import('@/routes/gamersky/ent.ts')"
       },
@@ -48621,12 +48648,12 @@
   },
   "gisreportsonline": {
     "routes": {
-      "/:path{.*}": {
-        "path": "/:path{.*}",
+      "/:path{.+}?": {
+        "path": "/:path{.+}?",
         "categories": [
           "new-media"
         ],
-        "example": "/gis/c/security-challenges/",
+        "example": "/gisreportsonline/gis/c/security-challenges/",
         "parameters": {
           "path": "包含\"Reports\"页面下的路径"
         },
@@ -59571,7 +59598,7 @@
         "categories": [
           "blog"
         ],
-        "example": "/posts/walnut",
+        "example": "/hedwig/posts/walnut",
         "parameters": {
           "site": "站点名，原则上只要是 `{site}.hedwig.pub` 都可以匹配"
         },
@@ -63416,15 +63443,13 @@
         "module": "() => import('@/routes/hupu/index.ts')"
       },
       "/news/:team": {
-        "path": [
-          "/news/:team"
-        ],
+        "path": "/news/:team",
         "name": "队伍新闻",
         "url": "m.hupu.com",
         "maintainers": [
           "hyoban"
         ],
-        "example": "/news/Spurs",
+        "example": "/hupu/news/Spurs",
         "parameters": {
           "team": {
             "description": "全小写的英文队名，例如：spurs, lakers, warriors 等等"
@@ -64990,9 +65015,7 @@
   "idaily": {
     "routes": {
       "/:language?": {
-        "path": [
-          "/:language?"
-        ],
+        "path": "/:language?",
         "name": "每日环球视野",
         "example": "/idaily",
         "maintainers": [
@@ -72813,7 +72836,7 @@
         "maintainers": [
           "nczitzk"
         ],
-        "example": "/chinese",
+        "example": "/joins/chinese",
         "parameters": {
           "category": "分类，默认为空，可在对应分类页 URL 中找到 `sc_section_code`"
         },
@@ -74987,7 +75010,7 @@
         "categories": [
           "game"
         ],
-        "example": "/blog/DLC",
+        "example": "/kisskiss/blog/DLC",
         "parameters": {
           "category": "category"
         },
@@ -85879,7 +85902,7 @@
         "categories": [
           "traditional-media"
         ],
-        "example": "/zh-tw/Bloomberg/sr-vid-08gw7ky4u229xjsjvnf4n6n7v67gxm0pjmv9fr4y2x9jjmwcri4s",
+        "example": "/msn/zh-tw/Bloomberg/sr-vid-08gw7ky4u229xjsjvnf4n6n7v67gxm0pjmv9fr4y2x9jjmwcri4s",
         "description": "MSN News",
         "features": {
           "requireConfig": false,
@@ -93632,7 +93655,7 @@
           "supportPodcast": false,
           "supportScihub": false
         },
-        "example": "/college/csse/2435",
+        "example": "/nwnu/college/csse/2435",
         "radar": [
           {
             "source": [
@@ -93663,7 +93686,7 @@
           "supportPodcast": false,
           "supportScihub": false
         },
-        "example": "/department/academic-affairs/tzgg",
+        "example": "/nwnu/department/academic-affairs/tzgg",
         "radar": [
           {
             "source": [
@@ -93694,7 +93717,7 @@
           "supportPodcast": false,
           "supportScihub": false
         },
-        "example": "/department/postgraduate/2701",
+        "example": "/nwnu/department/postgraduate/2701",
         "radar": [
           {
             "source": [
@@ -104504,9 +104527,7 @@
         "module": "() => import('@/routes/qq/kg/user.ts')"
       },
       "/pd/guild/:id/:sub?/:sort?": {
-        "path": [
-          "/pd/guild/:id/:sub?/:sort?"
-        ],
+        "path": "/pd/guild/:id/:sub?/:sort?",
         "categories": [
           "bbs"
         ],
@@ -107505,9 +107526,7 @@
         "module": "() => import('@/routes/sankei/news.ts')"
       },
       "/topics/:topic": {
-        "path": [
-          "/topics/:topic"
-        ],
+        "path": "/topics/:topic",
         "categories": [
           "traditional-media"
         ],
@@ -111972,9 +111991,7 @@
         "module": "() => import('@/routes/shu/index.ts')"
       },
       "/jwb/:type?": {
-        "path": [
-          "/jwb/:type?"
-        ],
+        "path": "/jwb/:type?",
         "radar": [
           {
             "source": [
@@ -111997,7 +112014,7 @@
         "categories": [
           "journal"
         ],
-        "example": "/journals/society/current",
+        "example": "/shu/journals/society/current",
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -112367,7 +112384,7 @@
         "categories": [
           "sport"
         ],
-        "example": "/sports",
+        "example": "/sina/sports",
         "parameters": {
           "type": "类别"
         },
@@ -116318,9 +116335,7 @@
   "stanford": {
     "routes": {
       "/hazyresearch/blog": {
-        "path": [
-          "/hazyresearch/blog"
-        ],
+        "path": "/hazyresearch/blog",
         "categories": [
           "blog"
         ],
@@ -116898,7 +116913,7 @@
         "maintainers": [
           "keocheung"
         ],
-        "example": "/news/958260/english",
+        "example": "/steam/news/958260/english",
         "parameters": {
           "appid": "Game App ID, all digits, can be found in the URL",
           "language": "Language, english by default, see below for more languages"
@@ -126751,7 +126766,7 @@
         "categories": [
           "blog"
         ],
-        "example": "/latest",
+        "example": "/towardsdatascience/latest",
         "radar": [
           {
             "source": [
@@ -128012,7 +128027,7 @@
     "apiRoutes": {},
     "name": "X (Twitter)",
     "url": "x.com",
-    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                               | Description                                                                                                                          | Accepts                | Defaults to                               |   |                        |        |   |                        |         |\n| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- | - | ---------------------- | ------ | - | ---------------------- | ------- |\n| `readable`                        | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `authorNameBold`                  | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorInTitle`               | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |   |                        |        |   |                        |         |\n| `showAuthorAsTitleOnly`           | Show only author name as title                                                                                                       | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorInDesc`                | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |   |                        |        |   |                        |         |\n| `showQuotedAuthorAvatarInDesc`    | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorAvatarInDesc`          | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showEmojiForRetweetAndReply`     | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showSymbolForRetweetAndReply`    | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `showRetweetTextInTitle`          | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `addLinkForPics`                  | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showTimestampInDescription`      | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showQuotedInTitle`               | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `widthOfPics`                     | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `heightOfPics`                    | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `sizeOfAuthorAvatar`              | Size of author's avatar                                                                                                              | Integer                | `48`                                      |   |                        |        |   |                        |         |\n| `sizeOfQuotedAuthorAvatar`        | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |   |                        |        |   |                        |         |\n| `includeReplies`                  | Include replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `includeRts`                      | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `forceWebApi`                     | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `count`                           | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `onlyMedia`                       | Only get tweets with a media                                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `mediaNumber `                    | Number the medias                                                                                                                    | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showEmojiForSubscriberOnly`      | Use \"🔒\" as prefix for subscriber-only posts                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showSymbolForSubscriberOnly`     | Use \"\\[Subscribers Only]\" as prefix for subscriber-only posts                                                                        | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `showFullPrefixForSubscriberOnly` | Use \"🔒 \\[Subscribers Only]\" as prefix for subscriber-only posts                                                                     | `0`/`1`/`true`/`false` | `false`                                   |   | `0`/`1`/`true`/`false` | `true` |   | `0`/`1`/`true`/`false` | `false` |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n~~- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.~~ This no longer works since mobile client attestation has been implemented in October 2025.\n\n- Using `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET`: Configure a comma-separated list of Twitter API keys and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API to obtain data.\n- OPTIONAL: Using `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_SECRET`: Configure a comma-separated list of Twitter API access tokens and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API with user authentication to obtain data. If not provided, RSSHub will only use app authentication, which may only access to public information.",
+    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                               | Description                                                                                                                          | Accepts                | Defaults to                               |\n| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- |\n| `readable`                        | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `authorNameBold`                  | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInTitle`               | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showAuthorAsTitleOnly`           | Show only author name as title                                                                                                       | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInDesc`                | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showQuotedAuthorAvatarInDesc`    | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorAvatarInDesc`          | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForRetweetAndReply`     | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForRetweetAndReply`    | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `showRetweetTextInTitle`          | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `addLinkForPics`                  | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `showTimestampInDescription`      | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |\n| `showQuotedInTitle`               | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |\n| `widthOfPics`                     | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |\n| `heightOfPics`                    | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |\n| `sizeOfAuthorAvatar`              | Size of author's avatar                                                                                                              | Integer                | `48`                                      |\n| `sizeOfQuotedAuthorAvatar`        | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |\n| `includeReplies`                  | Include replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |\n| `includeRts`                      | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |\n| `forceWebApi`                     | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `count`                           | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |\n| `onlyMedia`                       | Only get tweets with a media                                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |\n| `mediaNumber `                    | Number the medias                                                                                                                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForSubscriberOnly`      | Use \"🔒\" as prefix for subscriber-only posts                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForSubscriberOnly`     | Use \"\\[Subscribers Only]\" as prefix for subscriber-only posts                                                                        | `0`/`1`/`true`/`false` | `true`                                    |\n| `showFullPrefixForSubscriberOnly` | Use \"🔒 \\[Subscribers Only]\" as prefix for subscriber-only posts                                                                     | `0`/`1`/`true`/`false` | `false`                                   |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n~~- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.~~ This no longer works since mobile client attestation has been implemented in October 2025.\n\n- Using `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET`: Configure a comma-separated list of Twitter API keys and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API to obtain data.\n- OPTIONAL: Using `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_SECRET`: Configure a comma-separated list of Twitter API access tokens and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API with user authentication to obtain data. If not provided, RSSHub will only use app authentication, which may only access to public information.",
     "lang": "en"
   },
   "twreporter": {
@@ -136061,9 +136076,7 @@
   "ximalaya": {
     "routes": {
       "/:type/:id/:all/:shownote?": {
-        "path": [
-          "/:type/:id/:all/:shownote?"
-        ],
+        "path": "/:type/:id/:all/:shownote?",
         "categories": [
           "multimedia"
         ],
@@ -142837,7 +142850,7 @@
     "apiRoutes": {},
     "name": "X (Twitter)",
     "url": "x.com",
-    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                               | Description                                                                                                                          | Accepts                | Defaults to                               |   |                        |        |   |                        |         |\n| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- | - | ---------------------- | ------ | - | ---------------------- | ------- |\n| `readable`                        | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `authorNameBold`                  | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorInTitle`               | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |   |                        |        |   |                        |         |\n| `showAuthorAsTitleOnly`           | Show only author name as title                                                                                                       | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorInDesc`                | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |   |                        |        |   |                        |         |\n| `showQuotedAuthorAvatarInDesc`    | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showAuthorAvatarInDesc`          | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showEmojiForRetweetAndReply`     | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showSymbolForRetweetAndReply`    | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `showRetweetTextInTitle`          | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `addLinkForPics`                  | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showTimestampInDescription`      | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showQuotedInTitle`               | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `widthOfPics`                     | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `heightOfPics`                    | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `sizeOfAuthorAvatar`              | Size of author's avatar                                                                                                              | Integer                | `48`                                      |   |                        |        |   |                        |         |\n| `sizeOfQuotedAuthorAvatar`        | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |   |                        |        |   |                        |         |\n| `includeReplies`                  | Include replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `includeRts`                      | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `forceWebApi`                     | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `count`                           | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |   |                        |        |   |                        |         |\n| `onlyMedia`                       | Only get tweets with a media                                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `mediaNumber `                    | Number the medias                                                                                                                    | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showEmojiForSubscriberOnly`      | Use \"🔒\" as prefix for subscriber-only posts                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |   |                        |        |   |                        |         |\n| `showSymbolForSubscriberOnly`     | Use \"\\[Subscribers Only]\" as prefix for subscriber-only posts                                                                        | `0`/`1`/`true`/`false` | `true`                                    |   |                        |        |   |                        |         |\n| `showFullPrefixForSubscriberOnly` | Use \"🔒 \\[Subscribers Only]\" as prefix for subscriber-only posts                                                                     | `0`/`1`/`true`/`false` | `false`                                   |   | `0`/`1`/`true`/`false` | `true` |   | `0`/`1`/`true`/`false` | `false` |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n~~- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.~~ This no longer works since mobile client attestation has been implemented in October 2025.\n\n- Using `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET`: Configure a comma-separated list of Twitter API keys and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API to obtain data.\n- OPTIONAL: Using `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_SECRET`: Configure a comma-separated list of Twitter API access tokens and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API with user authentication to obtain data. If not provided, RSSHub will only use app authentication, which may only access to public information.",
+    "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n\n| Key                               | Description                                                                                                                          | Accepts                | Defaults to                               |\n| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- |\n| `readable`                        | Enable readable layout                                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `authorNameBold`                  | Display author name in bold                                                                                                          | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInTitle`               | Show author name in title                                                                                                            | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showAuthorAsTitleOnly`           | Show only author name as title                                                                                                       | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorInDesc`                | Show author name in description (RSS body)                                                                                           | `0`/`1`/`true`/`false` | `false` (`true` in `/twitter/followings`) |\n| `showQuotedAuthorAvatarInDesc`    | Show avatar of quoted Tweet's author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`                                   |\n| `showAuthorAvatarInDesc`          | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForRetweetAndReply`     | Use \"🔁\" instead of \"RT\", \"↩️\" & \"💬\" instead of \"Re\"                                                                                | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForRetweetAndReply`    | Use \" RT \" instead of \"\", \" Re \" instead of \"\"                                                                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `showRetweetTextInTitle`          | Show quote comments in title (if `false`, only the retweeted tweet will be shown in the title)                                       | `0`/`1`/`true`/`false` | `true`                                    |\n| `addLinkForPics`                  | Add clickable links for Tweet pictures                                                                                               | `0`/`1`/`true`/`false` | `false`                                   |\n| `showTimestampInDescription`      | Show timestamp in description                                                                                                        | `0`/`1`/`true`/`false` | `false`                                   |\n| `showQuotedInTitle`               | Show quoted tweet in title                                                                                                           | `0`/`1`/`true`/`false` | `false`                                   |\n| `widthOfPics`                     | Width of Tweet pictures                                                                                                              | Unspecified/Integer    | Unspecified                               |\n| `heightOfPics`                    | Height of Tweet pictures                                                                                                             | Unspecified/Integer    | Unspecified                               |\n| `sizeOfAuthorAvatar`              | Size of author's avatar                                                                                                              | Integer                | `48`                                      |\n| `sizeOfQuotedAuthorAvatar`        | Size of quoted tweet's author's avatar                                                                                               | Integer                | `24`                                      |\n| `includeReplies`                  | Include replies, only available in `/twitter/user`                                                                                   | `0`/`1`/`true`/`false` | `false`                                   |\n| `includeRts`                      | Include retweets, only available in `/twitter/user`                                                                                  | `0`/`1`/`true`/`false` | `true`                                    |\n| `forceWebApi`                     | Force using Web API even if Developer API is configured, only available in `/twitter/user` and `/twitter/keyword`                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `count`                           | `count` parameter passed to Twitter API, only available in `/twitter/user`                                                           | Unspecified/Integer    | Unspecified                               |\n| `onlyMedia`                       | Only get tweets with a media                                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |\n| `mediaNumber `                    | Number the medias                                                                                                                    | `0`/`1`/`true`/`false` | `false`                                   |\n| `showEmojiForSubscriberOnly`      | Use \"🔒\" as prefix for subscriber-only posts                                                                                         | `0`/`1`/`true`/`false` | `false`                                   |\n| `showSymbolForSubscriberOnly`     | Use \"\\[Subscribers Only]\" as prefix for subscriber-only posts                                                                        | `0`/`1`/`true`/`false` | `true`                                    |\n| `showFullPrefixForSubscriberOnly` | Use \"🔒 \\[Subscribers Only]\" as prefix for subscriber-only posts                                                                     | `0`/`1`/`true`/`false` | `false`                                   |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/twitter/user/durov/readable=1&authorNameBold=1&showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForRetweetAndReply=1&showRetweetTextInTitle=0&addLinkForPics=1&showTimestampInDescription=1&showQuotedInTitle=1&heightOfPics=150\n```\n\ngenerates\n\n<img loading=\"lazy\" src=\"/img/readable-twitter.png\" alt=\"Readable Twitter RSS of Durov\" />\n\nCurrently supports two authentication methods:\n\n- Using `TWITTER_AUTH_TOKEN` (recommended): Configure a comma-separated list of `auth_token` cookies of logged-in Twitter Web. RSSHub will use this information to directly access Twitter's web API to obtain data.\n\n~~- Using `TWITTER_USERNAME` `TWITTER_PASSWORD` and `TWITTER_AUTHENTICATION_SECRET`: Configure a comma-separated list of Twitter username and password. RSSHub will use this information to log in to Twitter and obtain data using the mobile API. Please note that if you have not logged in with the current IP address before, it is easy to trigger Twitter's risk control mechanism.~~ This no longer works since mobile client attestation has been implemented in October 2025.\n\n- Using `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET`: Configure a comma-separated list of Twitter API keys and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API to obtain data.\n- OPTIONAL: Using `TWITTER_ACCESS_TOKEN` and `TWITTER_ACCESS_SECRET`: Configure a comma-separated list of Twitter API access tokens and secrets. RSSHub will use this information to access Twitter's Pay-Per-Use developer API with user authentication to obtain data. If not provided, RSSHub will only use app authentication, which may only access to public information.",
     "lang": "en"
   },
   "daum": {

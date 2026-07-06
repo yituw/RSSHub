@@ -10019,6 +10019,19 @@
       }
     ]
   },
+  "cefco.cn": {
+    "_name": "亚布力中国企业家论坛",
+    "www": [
+      {
+        "title": "观点",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/research/news.html"
+        ],
+        "target": "/cefco/research/news"
+      }
+    ]
+  },
   "ceph.io": {
     "_name": "Ceph",
     ".": [
@@ -35101,6 +35114,19 @@
       }
     ]
   },
+  "njmuseum.com": {
+    "_name": "Nanjing Museum",
+    "www": [
+      {
+        "title": "Exhibitions",
+        "docs": "https://docs.rsshub.app/routes/travel",
+        "source": [
+          "/zh/exhibitionIndex"
+        ],
+        "target": "/njmuseum/exhibitionIndex"
+      }
+    ]
+  },
   "nju.edu.cn": {
     "_name": "南京大学",
     "rczp": [
@@ -38929,6 +38955,27 @@
           "/articles.html"
         ],
         "target": "/paulgraham/"
+      }
+    ]
+  },
+  "pawchive.st": {
+    "_name": "Pawchive",
+    ".": [
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/anime",
+        "source": [
+          "/"
+        ],
+        "target": "/pawchive/:service/:id"
+      },
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/anime",
+        "source": [
+          "/:service/user/:id"
+        ],
+        "target": "/pawchive/:service/:id"
       }
     ]
   },
@@ -44992,6 +45039,27 @@
       }
     ]
   },
+  "sxhm.com": {
+    "_name": "Shaanxi History Museum",
+    "www": [
+      {
+        "title": "Announcements",
+        "docs": "https://docs.rsshub.app/routes/travel",
+        "source": [
+          "/info/announcement.html"
+        ],
+        "target": "/sxhm/announcement"
+      },
+      {
+        "title": "Special Exhibition",
+        "docs": "https://docs.rsshub.app/routes/travel",
+        "source": [
+          "/Temporary.html"
+        ],
+        "target": "/sxhm/temporary"
+      }
+    ]
+  },
   "syosetu.com": {
     "_name": "Syosetu",
     "noc": [
@@ -49654,6 +49722,15 @@
         "target": "/xueqiu/hots"
       },
       {
+        "title": "股票信息",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/S/:id",
+          "/s/:id"
+        ],
+        "target": "/xueqiu/stock_info/:id"
+      },
+      {
         "title": "用户动态",
         "docs": "https://docs.rsshub.app/routes/finance",
         "source": [
@@ -49668,15 +49745,6 @@
           "/S/:id"
         ],
         "target": "/xueqiu/stock_comments/:id"
-      },
-      {
-        "title": "股票信息",
-        "docs": "https://docs.rsshub.app/routes/finance",
-        "source": [
-          "/S/:id",
-          "/s/:id"
-        ],
-        "target": "/xueqiu/stock_info/:id"
       },
       {
         "title": "今日话题",
@@ -50735,6 +50803,19 @@
           "/portfolio/:id"
         ],
         "target": "/zimuxia/portfolio/:id"
+      }
+    ]
+  },
+  "zjmuseum.com.cn": {
+    "_name": "Zhejiang Provincial Museum",
+    "www": [
+      {
+        "title": "Temporary Exhibition",
+        "docs": "https://docs.rsshub.app/routes/travel",
+        "source": [
+          "/cn/"
+        ],
+        "target": "/zjmuseum/exhibition/:type?"
       }
     ]
   },

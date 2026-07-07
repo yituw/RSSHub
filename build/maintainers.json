@@ -1547,6 +1547,9 @@
   "/cebbank/quotation/history/:type": [
     "linbuxiao"
   ],
+  "/cefco/research/news": [
+    "TonyRL"
+  ],
   "/ceph/blog/:topic?": [
     "pandada8"
   ],
@@ -3904,6 +3907,9 @@
   "/gov/npc/:caty": [
     "233yeee"
   ],
+  "/gov/nppa/:path{.+}": [
+    "y2361547758"
+  ],
   "/gov/nrta/dsj/:category?": [
     "nczitzk"
   ],
@@ -4034,6 +4040,12 @@
   "/gov/zhengce/zuixin": [
     "SettingDust",
     "nczitzk"
+  ],
+  "/gov/zj/zfcg-helper": [
+    "TonyRL"
+  ],
+  "/gov/zj/zfcg/:code?": [
+    "TonyRL"
   ],
   "/gov/zj/ningbogzw-notice/:colId?": [
     "HaoyuLee"
@@ -6305,6 +6317,9 @@
   "/njit/tzgg": [
     "zefengdaguo"
   ],
+  "/njmuseum/exhibitionIndex/:type?": [
+    "magazian"
+  ],
   "/njnu/ceai/:type": [
     "Shujakuinkuraudo"
   ],
@@ -6875,6 +6890,9 @@
     "Maecenas",
     "nczitzk",
     "dvorak0"
+  ],
+  "/pawchive/:service/:id": [
+    "TonyRL"
   ],
   "/pconline/focus/:category?": [
     "CH563"
@@ -8414,6 +8432,12 @@
   "/swpu/scs/:code": [
     "CYTMWIA"
   ],
+  "/sxhm/announcement": [
+    "magazian"
+  ],
+  "/sxhm/temporary": [
+    "magazian"
+  ],
   "/sycl/:feed?": [
     "mocusez"
   ],
@@ -9738,13 +9762,13 @@
   "/xueqiu/hots": [
     "hillerliao"
   ],
+  "/xueqiu/stock_info/:id/:type?": [
+    "YuYang"
+  ],
   "/xueqiu/user/:id/:type?": [
     "imlonghao"
   ],
   "/xueqiu/stock_comments/:id": [],
-  "/xueqiu/stock_info/:id/:type?": [
-    "YuYang"
-  ],
   "/xueqiu/today": [
     "nczitzk"
   ],
@@ -10116,6 +10140,9 @@
   ],
   "/zjgtjy/:type?": [
     "Fatpandac"
+  ],
+  "/zjmuseum/exhibition/:type?": [
+    "magazian"
   ],
   "/zjol/paper/:id?": [
     "nczitzk"

@@ -510,6 +510,7 @@ export type RoutePath =
   | `/ce/district/:category?`
   | `/cebbank/quotation/all`
   | `/cebbank/quotation/history/:type`
+  | `/cefco/research/news`
   | `/ceph/blog/:topic?`
   | `/cfachina/servicesupport/analygarden/:program?`
   | `/cffex/announcement`
@@ -1262,6 +1263,7 @@ export type RoutePath =
   | `/gov/nmpa/:path{.+}`
   | `/gov/nopss/:path{.+}?`
   | `/gov/npc/:caty`
+  | `/gov/nppa/:path{.+}`
   | `/gov/nrta/dsj/:category?`
   | `/gov/nrta/news/:category?`
   | `/gov/nsfc/:path{.+}?`
@@ -1307,6 +1309,8 @@ export type RoutePath =
   | `/gov/zj/ningbogzw-notice/:colId?`
   | `/gov/zj/ningborsjnotice/:colId?`
   | `/gov/zj/search/:websiteid?/:word/:cateid?`
+  | `/gov/zj/zfcg-helper`
+  | `/gov/zj/zfcg/:code?`
   | `/gq/news`
   | `/grainoil/:category/:id`
   | `/greasyfork/:language/:domain?`
@@ -2048,6 +2052,7 @@ export type RoutePath =
   | `/njglyy/ygbjypx`
   | `/njit/jwc/:type?`
   | `/njit/tzgg`
+  | `/njmuseum/exhibitionIndex/:type?`
   | `/njnu/ceai/:type`
   | `/njnu/jwc/:type`
   | `/nju/admission`
@@ -2223,6 +2228,7 @@ export type RoutePath =
   | `/paulgraham/`
   | `/paulgraham/articles`
   | `/paulgraham/essays`
+  | `/pawchive/:service/:id`
   | `/pconline/focus/:category?`
   | `/pencilnews/`
   | `/penguin-random-house/articles`
@@ -2719,6 +2725,8 @@ export type RoutePath =
   | `/swpu/dxy/:code`
   | `/swpu/is/:code`
   | `/swpu/scs/:code`
+  | `/sxhm/announcement`
+  | `/sxhm/temporary`
   | `/sycl/:feed?`
   | `/syosetu/:ncode`
   | `/syosetu/dev`
@@ -3263,6 +3271,7 @@ export type RoutePath =
   | `/zimuxia/:category?`
   | `/zimuxia/portfolio/:id`
   | `/zjgtjy/:type?`
+  | `/zjmuseum/exhibition/:type?`
   | `/zjol/paper/:id?`
   | `/zju/career/:type`
   | `/zju/cse/:category?`

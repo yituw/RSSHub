@@ -55,6 +55,7 @@ export type RoutePath =
   | `/36kr/hot-list/:category?`
   | `/3dmgame/games/:name/:type?`
   | `/3dmgame/news/:category?`
+  | `/3gmuseum/tempexhibition`
   | `/3kns/:filters?/:order?`
   | `/423down/:category{.+}?`
   | `/4chan/:board/catalog/:routeParams?`
@@ -455,6 +456,8 @@ export type RoutePath =
   | `/cankaoxiaoxi/column/:id?`
   | `/capitalmind/insights`
   | `/capitalmind/podcasts`
+  | `/capitalmuseum/exhibition/:type?`
+  | `/capitalmuseum/news/:type?`
   | `/cara/likes/:user`
   | `/cara/portfolio/:user`
   | `/cara/timeline/:user`
@@ -545,6 +548,7 @@ export type RoutePath =
   | `/chinanews/`
   | `/chinania/:category{.+}?`
   | `/chinaratings/CreditResearch/:category{.+}?`
+  | `/chinasilkmuseum/zz`
   | `/chinathinktanks/:id`
   | `/chinatimes/:category?`
   | `/chinaventure/news/:id?`
@@ -694,6 +698,8 @@ export type RoutePath =
   | `/ctinews/topic/:topic?`
   | `/cts/:category`
   | `/cuc/yz`
+  | `/cugb/jwc/:channel?`
+  | `/cugb/news/:channel?`
   | `/cuilingmag/:category?`
   | `/cupl/jwc`
   | `/curiouscat/user/:id`
@@ -712,12 +718,12 @@ export type RoutePath =
   | `/cztv/zjxwlb`
   | `/cztv/zjxwlb/daily`
   | `/dahecube/:type?`
-  | `/daily/discussed/:period?/:innerSharedContent?/:dateSort?`
-  | `/daily/popular/:innerSharedContent?/:dateSort?`
-  | `/daily/source/:sourceId/:innerSharedContent?`
-  | `/daily/squads/:squads/:innerSharedContent?`
-  | `/daily/upvoted/:period?/:innerSharedContent?/:dateSort?`
-  | `/daily/user/:userId/:innerSharedContent?`
+  | `/daily/discussed/:period?/:dateSort?`
+  | `/daily/popular/:dateSort?`
+  | `/daily/source/:sourceId`
+  | `/daily/squads/:squads`
+  | `/daily/upvoted/:period?/:dateSort?`
+  | `/daily/user/:userId`
   | `/dailypush/:sort?`
   | `/dailypush/tag/:tag/:sort?`
   | `/damai/activity/:city/:category/:subcategory/:keyword?`
@@ -1031,6 +1037,8 @@ export type RoutePath =
   | `/forklog/news`
   | `/fortnite/news/:options?`
   | `/fortunechina/:category?`
+  | `/forwardfuture/daily`
+  | `/forwardfuture/originals`
   | `/fosshub/:id`
   | `/free/`
   | `/freebuf/articles/:type`
@@ -1101,6 +1109,8 @@ export type RoutePath =
   | `/gcores/users/:id/radios`
   | `/gcores/users/:id/talks`
   | `/gcores/videos`
+  | `/gdmuseum/exhibition/:type?`
+  | `/gdmuseum/information`
   | `/gdsrx/:id?`
   | `/gdufs/news`
   | `/gdufs/xwxy/:category?`
@@ -1346,7 +1356,7 @@ export type RoutePath =
   | `/gxmzu/yjszsgg`
   | `/gzdaily/app/:column?`
   | `/gzhu/yjs`
-  | `/hackernews/:section?/:type?/:user?`
+  | `/hackernews/:section?/:type?/:value?`
   | `/hackertalk/`
   | `/hacking8/:category?`
   | `/hacking8/search/:keyword?`
@@ -1406,6 +1416,8 @@ export type RoutePath =
   | `/hkushop/vinyl/:cat?`
   | `/hlju/news/:category?`
   | `/hljucm/yjsy/:category?`
+  | `/hnmuseum/current-exhibitions/:type?`
+  | `/hnmuseum/hnmnews`
   | `/hnrb/:id?`
   | `/hnu/careers`
   | `/home-assistant/hacs/repositories`
@@ -1792,6 +1804,8 @@ export type RoutePath =
   | `/lkong/forum/:id?/:digest?`
   | `/lkong/thread/:id`
   | `/lmu/jobs`
+  | `/lnmuseum/exhibition/temporary/:type?`
+  | `/lnmuseum/information`
   | `/locals/content/:community/:option1?/:option2?`
   | `/lofter/collection/:collectionID`
   | `/lofter/tag/:name?/:type?`
@@ -1810,6 +1824,7 @@ export type RoutePath =
   | `/lrepacks/:category?`
   | `/lsnu/jiaowc/tzgg/:category?`
   | `/ltaaa/article`
+  | `/ltn/def/:channel{.+}?`
   | `/luma/:url`
   | `/luogu/contest`
   | `/luogu/daily/:id?`
@@ -2474,6 +2489,7 @@ export type RoutePath =
   | `/scmp/:category_id`
   | `/scmp/coronavirus`
   | `/scmp/topics/:topic`
+  | `/scmuseum/exhibition/:type?`
   | `/scnu/cs/match`
   | `/scnu/jw`
   | `/scnu/library`
@@ -2737,6 +2753,7 @@ export type RoutePath =
   | `/sysu/ygafz/:type?`
   | `/szftedu/dongtai`
   | `/szftedu/gonggao`
+  | `/szmuseum/temporary`
   | `/szse/disclosure/listed/notice/:query?`
   | `/szse/inquire/:category?/:select?/:keyword?`
   | `/szse/notice`
@@ -2845,6 +2862,8 @@ export type RoutePath =
   | `/tingshuitz/yangjiang`
   | `/tingtingfm/program/:programId`
   | `/tisi/latest`
+  | `/tjbwg/exhibition`
+  | `/tjbwg/news`
   | `/tju/cic/:type?`
   | `/tju/news/:type?`
   | `/tju/oaa/:type?`
@@ -3279,6 +3298,7 @@ export type RoutePath =
   | `/zju/cst/custom/:id`
   | `/zju/grs/:type`
   | `/zju/list/:type`
+  | `/zju/math/:type`
   | `/zju/physics/:type`
   | `/zju/sis/:type`
   | `/zjut/cs/:type`
